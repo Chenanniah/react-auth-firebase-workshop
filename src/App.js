@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 import './App.css';
 import './firebase/config';
-// import './pages/Signup';
+import './pages/Signup';
 import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom';
 // import Signup from './pages/Signup';
 // import Login from './pages/Login';
@@ -11,6 +11,7 @@ import { UserProvider } from './firebase/UserProvider';
 // import Profile from './pages/Profile';
 // import ProfileRedirect from './router/ProfileRedirect';
 // import PrivateRoute from './router/PrivateRoute';
+
 
 function App() {
   return (
