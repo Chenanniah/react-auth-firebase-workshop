@@ -1,16 +1,21 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/storage';
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-firebase.initializeApp({
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  databaseURL: process.env.REACT_APP_DATABASE_URL,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-});
-console.log(firebase.app().options);
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDYlBcpoploNC2T-ds3K7ykPBvHPwrvDDI",
+  authDomain: "fir-workshop-4ddb4.firebaseapp.com",
+  projectId: "fir-workshop-4ddb4",
+  storageBucket: "fir-workshop-4ddb4.appspot.com",
+  messagingSenderId: "691261276696",
+  appId: "1:691261276696:web:9e3a00439a005842f7396d",
+  measurementId: "G-EFV2L28CWF"
+};
 
-export const firestore = firebase.firestore();
-export const storage = firebase.storage();
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
